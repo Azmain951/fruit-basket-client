@@ -14,9 +14,11 @@ const Fruits = () => {
     return (
         <div className='container mt-5'>
             <h2 className='text-center'>Inventory Items</h2>
-            {
-                fruits.map(fruit => <Fruit key={fruit.id} fruit={fruit}></Fruit>)
-            }
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+                {
+                    fruits.slice(0, 6).map(fruit => <Fruit key={fruit.id} fruit={fruit}></Fruit>)
+                }
+            </div>
         </div>
     );
 };

@@ -1,14 +1,5 @@
 [
   {
-    "id": 1,
-    "img": "https://i.ibb.co/WfLfvRw/apple.jpg",
-    "name": "Apple",
-    "price": 4.62,
-    "quantity": 100,
-    "supplier": "Ronsin International",
-    "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus."
-  },
-  {
     "id": 2,
     "img": "https://i.ibb.co/pQR2YVt/banana.jpg",
     "name": "Banana",
