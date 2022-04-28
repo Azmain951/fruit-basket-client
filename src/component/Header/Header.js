@@ -2,11 +2,12 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
+import './Header.css'
 
 const Header = () => {
     return (
-        <div>
-            <Navbar bg="light" expand="lg">
+        <div className='header'>
+            <Navbar className='py-3' sticky='top' bg="light" expand="lg">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
                         <img
