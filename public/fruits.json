@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/WfLfvRw/apple.jpg",
+    "name": "Apple",
+    "price": 4.62,
+    "quantity": 100,
+    "supplier": "Ronsin International",
+    "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus."
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/pQR2YVt/banana.jpg",
+    "name": "Banana",
+    "price": 1.58,
+    "quantity": 150,
+    "supplier": "Mi9 International",
+    "description": "A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa."
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/JnrXSHS/dragon-fruit.jpg",
+    "name": "Dragon Fruit",
+    "price": 5.38,
+    "quantity": 50,
+    "supplier": " Agrosyn Impex",
+    "description": "A pitaya is the fruit of several different cactus species indigenous to the Americas. Pitaya usually refers to fruit of the genus Stenocereus."
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/w6kGrkD/green-apple.jpg",
+    "name": "Green Apple",
+    "price": 5.46,
+    "quantity": 80,
+    "supplier": "T&T FRESH",
+    "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus."
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/4M8jkvJ/lemon.jpg",
+    "name": "Lemon",
+    "price": 3.22,
+    "quantity": 60,
+    "supplier": "GD Lemon Supplier",
+    "description": "The lemon is a species of small evergreen trees in the flowering plant family Rutaceae, native to Asia, primarily Northeast India or China."
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/gvPzBg4/orange.jpg",
+    "name": "Orange",
+    "price": 4.03,
+    "quantity": 90,
+    "supplier": "Nizam Exports",
+    "description": "An orange is a fruit of various citrus species in the family Rutaceae. it primarily refers to Citrus sinensis, which is also called sweet orange."
+  },
+  {
+    "id": 7,
+    "img": "https://i.ibb.co/5MH4HcZ/papaya.jpg",
+    "name": "Papaya",
+    "price": 1.2,
+    "quantity": 80,
+    "supplier": "Carmel Valley Farm",
+    "description": "Papayas grow in tropical climates and are also known as papaws or pawpaws. Their sweet taste, vibrant color, and the wide variety of health benefits."
+  },
+  {
+    "id": 8,
+    "img": "https://i.ibb.co/Jsjnshy/peach.jpg",
+    "name": "Peach",
+    "price": 2.87,
+    "quantity": 100,
+    "supplier": "Pear Orchards Llc",
+    "description": "The peach is a deciduous tree first domesticated and cultivated in Eastern China. It bears edible juicy fruits with various characteristic."
+  },
+  {
+    "id": 9,
+    "img": "https://i.ibb.co/CQ11Fr4/pompgranate.jpg",
+    "name": "Pomegranate",
+    "price": 3.99,
+    "quantity": 120,
+    "supplier": "Oasis Valley Orchard",
+    "description": "The pomegranate is a fruit-bearing deciduous shrub in the family Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m tall."
+  },
+  {
+    "id": 10,
+    "img": "https://i.ibb.co/4pBKBy6/raspberry.jpg",
+    "name": "Raspberry",
+    "price": 6.46,
+    "quantity": 50,
+    "supplier": "Brecon Foods Inc",
+    "description": "The raspberry is the edible fruit of a multitude of plant species in the genus Rubus of the rose family, most of which are in the subgenus Idaeobatus."
+  },
+  {
+    "id": 11,
+    "img": "https://i.ibb.co/2MxpNnR/red-cherry.jpg",
+    "name": "Red Cerry",
+    "price": 3.1,
+    "quantity": 70,
+    "supplier": "Kojna Vella",
+    "description": "A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe. Commercial cherries are obtained from cultivars of several species."
+  },
+  {
+    "id": 12,
+    "img": "https://i.ibb.co/2SyP2D1/strawberry.jpg",
+    "name": "Strawberry",
+    "price": 6.7,
+    "quantity": 120,
+    "supplier": "Dr Food & Fresh",
+    "description": "The garden strawberry is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries, which are cultivated worldwide."
+  }
+]
