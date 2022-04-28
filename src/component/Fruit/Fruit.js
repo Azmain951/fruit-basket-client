@@ -13,7 +13,8 @@ const Fruit = ({ fruit }) => {
                     <p className="card-text">Price: ${price} <small>per kg.</small></p>
                     <p className='card-text'>Quantity: {quantity} kg</p>
                     <p className='card-text'>Supplier: {supplier}</p>
-                    <small className='card-text'>{description}</small>
+                    <p><small className='card-text'>{description}</small></p>
+                    <button className='btn btn-primary'>Update</button>
                 </div>
             </div>
         </div>
