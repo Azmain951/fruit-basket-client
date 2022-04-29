@@ -5,6 +5,23 @@ const AddNewItem = () => {
 
     const handleAddItem = e => {
         e.preventDefault();
+        const email = e.target.email.value;
+        const name = e.target.name.value;
+        const supplier = e.target.supplier.value;
+        const price = e.target.price.value;
+        const quantity = e.target.quantity.value;
+        const description = e.target.description.value;
+        const img = e.target.img.value;
+
+        const newItem = { email, name, supplier, price, quantity, description, img };
+
+        fetch('http://localhost:5000/fruits', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newItem)
+        })
     }
 
     return (

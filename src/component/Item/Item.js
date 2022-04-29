@@ -2,6 +2,9 @@ import React from 'react';
 
 const Item = ({ fruit }) => {
     const { _id, name, img, description, price, quantity, supplier } = fruit;
+    const handleRemove = () => {
+
+    }
     return (
 
         <tr className=''>
@@ -10,7 +13,7 @@ const Item = ({ fruit }) => {
             <td>{supplier}</td>
             <td>{price}</td>
             <td>{quantity}</td>
-            <td><button className='btn btn-danger'>Remove Item</button></td>
+            <td><button onClick={handleRemove} className='btn btn-danger'>Remove Item</button></td>
         </tr>
 
     );
