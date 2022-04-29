@@ -8,6 +8,7 @@ import Home from './component/Home/Home';
 import Login from './component/Login/Login';
 import ManageItems from './component/ManageItems/ManageItems';
 import Register from './component/Register/Register';
+import RequireAuth from './component/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -17,8 +18,14 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/fruit/:id' element={<FruitDetails></FruitDetails>}></Route>
-        <Route path='/manage-items' element={<ManageItems></ManageItems>}></Route>
-        <Route path='/add-items' element={<AddNewItem></AddNewItem>}></Route>
+        <Route path='/manage-items' element={
+          <RequireAuth>
+            <ManageItems></ManageItems>
+          </RequireAuth>}></Route>
+        <Route path='/add-items' element={
+          <RequireAuth>
+            <AddNewItem></AddNewItem>
+          </RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
