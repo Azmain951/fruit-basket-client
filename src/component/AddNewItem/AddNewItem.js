@@ -22,6 +22,11 @@ const AddNewItem = () => {
             },
             body: JSON.stringify(newItem)
         })
+            .then(res => res.json())
+            .then(data => {
+                console.log('success', data);
+                alert('Item added successfully');
+            })
     }
 
     return (
