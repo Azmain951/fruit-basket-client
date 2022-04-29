@@ -32,6 +32,29 @@ const FruitDetails = () => {
             })
     }
 
+    const handleAddFruits = e => {
+
+        e.preventDefault();
+        const newQuantity = parseInt(e.target.quantity.value);
+
+        const updateQuantity = { quantity: (result.quantity + newQuantity) }
+        console.log(updateQuantity);
+
+        const url = `http://localhost:5000/fruits/${result._id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('success', data);
+                alert('user added successfully');
+            })
+    }
+
     return (
         <div className='w-75 mx-auto my-4'>
             <div className="card mb-3">
@@ -46,10 +69,11 @@ const FruitDetails = () => {
                             <p className="card-text">{result.description}</p>
                             <p>Price: ${result.price} <small>per kg</small></p>
                             <p>Quantity: {result.quantity}<small> kg</small></p>
-                            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                            <div>
-                                <button onClick={() => handleDelivered(result._id)} className='btn btn-primary'>Delivered</button>
-                            </div>
+                            <button onClick={() => handleDelivered(result._id)} className='btn btn-primary'>Delivered</button>
+                            <form className='mt-2' onSubmit={handleAddFruits}>
+                                <input className='me-2 py-1' type="text" name='quantity' placeholder='enter quantity to add' />
+                                <input className='btn btn-primary' type="submit" value="Add" />
+                            </form>
                         </div>
                     </div>
                 </div>
