@@ -5,6 +5,7 @@ import Footer from './component/Footer/Footer';
 import FruitDetails from './component/FruitDetails/FruitDetails';
 import Header from './component/Header/Header';
 import Home from './component/Home/Home';
+import Login from './component/Login/Login';
 import ManageItems from './component/ManageItems/ManageItems';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/fruit/:id' element={<FruitDetails></FruitDetails>}></Route>
         <Route path='/manage-items' element={<ManageItems></ManageItems>}></Route>
         <Route path='/add-items' element={<AddNewItem></AddNewItem>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
