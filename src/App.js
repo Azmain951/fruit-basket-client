@@ -7,6 +7,7 @@ import Header from './component/Header/Header';
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
 import ManageItems from './component/ManageItems/ManageItems';
+import MyItems from './component/MyItems/MyItems';
 import Register from './component/Register/Register';
 import RequireAuth from './component/RequireAuth/RequireAuth';
 
@@ -25,6 +26,10 @@ function App() {
         <Route path='/add-items' element={
           <RequireAuth>
             <AddNewItem></AddNewItem>
+          </RequireAuth>}></Route>
+        <Route path='/my-items' element={
+          <RequireAuth>
+            <MyItems></MyItems>
           </RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
