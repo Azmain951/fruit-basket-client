@@ -3,6 +3,8 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin'
+import Loading from '../Loading/Loading';
 
 const Login = () => {
 
@@ -21,6 +23,10 @@ const Login = () => {
 
     if (user) {
         navigate(from, { replace: true });
+    }
+
+    if (loading) {
+        return <Loading></Loading>
     }
 
     if (error) {
@@ -51,6 +57,7 @@ const Login = () => {
             {errorElement}
             <p>New to Food Basket? <Link to='/register' className='text-primary pe-auto'>Please Register</Link></p>
             <p>Forget Password? <button className='btn btn-link text-secondary pe-auto'>Reset Password</button></p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

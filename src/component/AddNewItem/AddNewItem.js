@@ -1,8 +1,10 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddNewItem = () => {
-
+    const [user] = useAuthState(auth);
     const handleAddItem = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -36,7 +38,7 @@ const AddNewItem = () => {
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control name='email' type="email" placeholder="Enter email" />
+                        <Form.Control name='email' type="email" value={user.email} readOnly disabled />
                     </Form.Group>
                 </Row>
                 <Row>
