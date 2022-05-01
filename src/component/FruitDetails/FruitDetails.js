@@ -1,7 +1,7 @@
-
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import useFruits from '../../hooks/useFruits';
+
+
 const FruitDetails = () => {
     const { id } = useParams();
     const [result, setResult] = useState({});
@@ -28,7 +28,7 @@ const FruitDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('user added successfully');
+                alert(`1 ${result.name} delivered!!!`);
             })
     }
 
@@ -51,7 +51,7 @@ const FruitDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('user added successfully');
+                alert(`${newQuantity} ${result.name} added successfully`);
             })
     }
 

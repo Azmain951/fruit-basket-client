@@ -6,7 +6,6 @@ import Loading from '../Loading/Loading';
 import './Register.css'
 
 const Register = () => {
-    let name;
     const navigate = useNavigate();
     const [agree, setAgree] = useState(false);
     let errorMessage;
@@ -21,8 +20,6 @@ const Register = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     if (user) {
-        updateProfile({ displayName: name });
-        alert('User registered successfully!!!');
         navigate('/home');
     }
 
@@ -34,12 +31,14 @@ const Register = () => {
         errorMessage = <p className='text-danger'>Error: {error?.message || updateError?.message} </p>
     }
 
-    const handleRegister = e => {
+    const handleRegister = async e => {
         e.preventDefault();
-        name = e.target.name.value;
+        const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        alert('User registered successfully!!!');
     }
 
     return (

@@ -9,7 +9,7 @@ const Item = ({ fruit }) => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('item removed successfully');
+                alert('Item removed successfully');
             })
     }
     return (
