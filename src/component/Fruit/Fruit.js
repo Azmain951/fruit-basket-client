@@ -13,12 +13,14 @@ const Fruit = ({ fruit }) => {
     return (
         <div className="col">
             <div className="card h-100 border-0 shadow rounded-3 m-2">
-                <img src={img} className="card-img-top rounded-top-3" alt="..." />
+                <img src={img} className="card-img-top p-2 rounded-2" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
+                    <p className='card-text'>Supplier: {supplier}</p>
+                    <hr />
                     <p className="card-text">Price: ${price} <small>per kg.</small></p>
                     <p className='card-text'>Quantity: {quantity} kg</p>
-                    <p className='card-text'>Supplier: {supplier}</p>
+                    <hr />
                     <p><small className='card-text'>{description}</small></p>
                 </div>
                 <div className='card-footer p-0'>

@@ -12,7 +12,7 @@ const ManageItems = () => {
     }
 
     return (
-        <div className='w-75 mx-auto my-5'>
+        <div className='container mx-auto my-5'>
             <div className='d-flex justify-content-center align-items-center mb-5'>
                 <h1 className='ms-auto'>Inventory</h1>
                 <button onClick={handleAddItem} className='btn btn-link ms-auto'>Add New Item</button>
