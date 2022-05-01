@@ -1,10 +1,14 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const AddNewItem = () => {
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
+
     const handleAddItem = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -27,7 +31,8 @@ const AddNewItem = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('Item added successfully');
+                toast.success('Item added successfully');
+                navigate('/my-items');
             })
     }
 

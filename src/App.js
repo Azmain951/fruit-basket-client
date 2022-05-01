@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddNewItem from './component/AddNewItem/AddNewItem';
@@ -16,6 +17,7 @@ import RequireAuth from './component/RequireAuth/RequireAuth';
 function App() {
   return (
     <div className='background'>
+      <Toaster></Toaster>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

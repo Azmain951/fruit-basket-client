@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import toast, { Toaster } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
@@ -38,7 +39,7 @@ const Register = () => {
         const password = e.target.password.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        alert('User registered successfully!!!');
+        toast.success('User registered successfully!!!');
     }
 
     return (
@@ -58,7 +59,6 @@ const Register = () => {
             </form>
             {errorMessage}
             <p>Already have an account? <Link to='/login' className='text-primary pe-auto'>Please Login</Link></p>
-
         </div >
     );
 };
