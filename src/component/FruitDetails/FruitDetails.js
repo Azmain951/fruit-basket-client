@@ -6,7 +6,7 @@ const FruitDetails = () => {
     const { id } = useParams();
     const [result, setResult] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/fruits/${id}`;
+        const url = `https://thawing-hollows-22749.herokuapp.com/fruits/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setResult(data))
@@ -17,7 +17,7 @@ const FruitDetails = () => {
         const updateQuantity = { quantity: (result.quantity - 1) }
         console.log(updateQuantity);
 
-        const url = `http://localhost:5000/fruits/${id}`;
+        const url = `https://thawing-hollows-22749.herokuapp.com/fruits/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -40,7 +40,7 @@ const FruitDetails = () => {
         const updateQuantity = { quantity: (result.quantity + newQuantity) }
         console.log(updateQuantity);
 
-        const url = `http://localhost:5000/fruits/${result._id}`;
+        const url = `https://thawing-hollows-22749.herokuapp.com/fruits/${result._id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

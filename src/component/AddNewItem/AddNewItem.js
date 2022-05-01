@@ -21,7 +21,7 @@ const AddNewItem = () => {
 
         const newItem = { email, name, supplier, price, quantity, description, img };
 
-        fetch('http://localhost:5000/fruits', {
+        fetch('https://thawing-hollows-22749.herokuapp.com/fruits', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
