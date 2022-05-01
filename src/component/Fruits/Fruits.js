@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Fruit from '../Fruit/Fruit';
 import useFruits from '../../hooks/useFruits'
 import { useNavigate } from 'react-router-dom';
+import { BsArrowRightCircle } from "react-icons/bs";
 
 const Fruits = () => {
     const navigate = useNavigate();
@@ -19,7 +20,7 @@ const Fruits = () => {
                     fruits.slice(0, 6).map(fruit => <Fruit key={fruit._id} fruit={fruit}></Fruit>)
                 }
             </div>
-            <button onClick={handleManage} className='w-100 btn btn-link mt-5'>Manage Inventory</button>
+            <button onClick={handleManage} className='w-100 btn btn-link mt-5'>Manage Inventory <BsArrowRightCircle /></button>
         </div>
     );
 };

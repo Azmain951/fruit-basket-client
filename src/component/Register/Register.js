@@ -4,6 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Register.css'
 
 const Register = () => {
@@ -59,6 +60,7 @@ const Register = () => {
             </form>
             {errorMessage}
             <p>Already have an account? <Link to='/login' className='text-primary pe-auto'>Please Login</Link></p>
+            <SocialLogin></SocialLogin>
         </div >
     );
 };
