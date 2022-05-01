@@ -4,7 +4,7 @@ import query from '../../images/query.jpg'
 
 const ContactUs = () => {
     return (
-        <div className='container shadow rounded-3 mb-5'>
+        <div className='container shadow rounded-3 mb-5 pt-5'>
             <h2 className='text-center'>Contact us for any Query</h2>
             <div className="row">
                 <div className='col-12 col-lg-6 p-5'>

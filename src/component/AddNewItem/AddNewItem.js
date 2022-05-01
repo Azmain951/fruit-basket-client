@@ -30,7 +30,6 @@ const AddNewItem = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('success', data);
                 toast.success('Item added successfully');
                 navigate('/my-items');
             })

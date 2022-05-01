@@ -1,5 +1,7 @@
 import React from 'react';
 import quality from '../../images/quality.png'
+import { FcApproval } from "react-icons/fc";
+import './Quality.css'
 
 const Quality = () => {
     return (
@@ -9,17 +11,17 @@ const Quality = () => {
                     <img src={quality} alt="" className='img-fluid' />
                 </div>
                 <div className='col-12 col-lg-6 p-5 d-flex flex-column justify-content-center ms-5'>
-                    <h2>Best Quality Assurance</h2>
-                    <ul>
-                        <li>Training Staff</li>
-                        <li>Safety</li>
-                        <li>Security</li>
-                        <li>Storage Space</li>
-                        <li>Mechanical Appliances</li>
-                        <li>Emergency Protocol</li>
-                        <li>Picking Process</li>
-                        <li>Quality Control</li>
-                    </ul>
+                    <h2 className='mb-2'>Best Quality Assurance</h2>
+                    <div className='list'>
+                        <li><FcApproval /> Training Staff</li>
+                        <li><FcApproval /> Safety</li>
+                        <li><FcApproval /> Security</li>
+                        <li><FcApproval /> Storage Space</li>
+                        <li><FcApproval /> Mechanical Appliances</li>
+                        <li><FcApproval /> Emergency Protocol</li>
+                        <li><FcApproval /> Picking Process</li>
+                        <li><FcApproval /> Quality Control</li>
+                    </div>
                 </div>
             </div>
 

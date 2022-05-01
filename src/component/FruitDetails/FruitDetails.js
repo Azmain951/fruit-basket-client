@@ -15,7 +15,6 @@ const FruitDetails = () => {
     const handleDelivered = (id) => {
 
         const updateQuantity = { quantity: (result.quantity - 1) }
-        console.log(updateQuantity);
 
         const url = `https://thawing-hollows-22749.herokuapp.com/fruits/${id}`;
         fetch(url, {
@@ -27,7 +26,6 @@ const FruitDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('success', data);
                 alert(`1 ${result.name} delivered!!!`);
             })
     }
@@ -38,7 +36,6 @@ const FruitDetails = () => {
         const newQuantity = parseInt(e.target.quantity.value);
 
         const updateQuantity = { quantity: (result.quantity + newQuantity) }
-        console.log(updateQuantity);
 
         const url = `https://thawing-hollows-22749.herokuapp.com/fruits/${result._id}`;
         fetch(url, {
@@ -50,7 +47,6 @@ const FruitDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('success', data);
                 alert(`${newQuantity} ${result.name} added successfully`);
             })
     }
