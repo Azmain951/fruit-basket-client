@@ -19,7 +19,7 @@ const Fruits = () => {
                     fruits.slice(0, 6).map(fruit => <Fruit key={fruit._id} fruit={fruit}></Fruit>)
                 }
             </div>
-            <button onClick={handleManage} className='w-100 btn btn-link'>Manage Inventory</button>
+            <button onClick={handleManage} className='w-100 btn btn-link mt-5'>Manage Inventory</button>
         </div>
     );
 };
