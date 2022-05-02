@@ -14,7 +14,7 @@ const ManageItems = () => {
     }
 
     return (
-        <div className='manage-item container mx-auto my-5'>
+        <div className='manage-item container mx-auto my-5 shadow p-5 rounded'>
             <div className='d-flex justify-content-center align-items-center mb-5'>
                 <h1 className='ms-auto'>Inventory</h1>
                 <button onClick={handleAddItem} className='btn btn-manage border-0 rounded-pill px-3 py-2 ms-auto'>Add New Item <RiAddCircleLine /></button>
@@ -26,7 +26,7 @@ const ManageItems = () => {
                         <th scope="col">Name</th>
                         <th scope="col">Supplier</th>
                         <th scope="col">Price($)</th>
-                        <th scope="col">Quantity</th>
+                        <th scope="col">Quantity(kg)</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>

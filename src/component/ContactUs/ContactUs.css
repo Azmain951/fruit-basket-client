@@ -1,0 +1,9 @@
+.contact {
+    border-radius: 0 0 50px 50px;
+}
+
+@media screen and (max-width:576px) {
+    .contact {
+        width: 95% !important;
+    }
+}

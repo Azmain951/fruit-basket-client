@@ -14,7 +14,7 @@ const Fruits = () => {
     }
 
     return (
-        <div className='container mt-5'>
+        <div className='container fruits mt-5 shadow p-5'>
             <h2 className='text-center'>Inventory Items</h2>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2">
                 {

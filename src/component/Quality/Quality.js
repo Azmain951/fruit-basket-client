@@ -5,7 +5,7 @@ import './Quality.css'
 
 const Quality = () => {
     return (
-        <div className='container shadow rounded-3 my-5'>
+        <div className='container quality shadow my-5'>
             <div className='row'>
                 <div className='col-12 col-lg-5 p-5'>
                     <img src={quality} alt="" className='img-fluid' />

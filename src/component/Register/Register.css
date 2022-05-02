@@ -1,9 +1,3 @@
-.register {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 50px;
-}
-
 .register input:not([type=checkbox]) {
     display: block;
     width: 100%;
@@ -13,4 +7,10 @@
     padding-left: 10px;
     margin-bottom: 15px;
     font-size: 16px;
+}
+
+@media screen and (max-width:576px) {
+    .register {
+        width: 90% !important;
+    }
 }

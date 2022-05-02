@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import query from '../../images/query.jpg'
+import query from '../../images/query.jpg';
+import './ContactUs.css'
 
 const ContactUs = () => {
     return (
-        <div className='container shadow rounded-3 mb-5 pt-5'>
+        <div className='container contact shadow mb-5 pt-5'>
             <h2 className='text-center'>Contact us for any Query</h2>
             <div className="row">
                 <div className='col-12 col-lg-6 p-5'>

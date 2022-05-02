@@ -7,6 +7,7 @@ import SocialLogin from '../SocialLogin/SocialLogin'
 import Loading from '../Loading/Loading';
 import toast from 'react-hot-toast';
 import './Login.css'
+import axios from 'axios';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -37,11 +38,14 @@ const Login = () => {
         errorElement = <p className='text-danger'>Error: {error?.message} </p>
     }
 
-    const handleLogin = e => {
+    const handleLogin = async e => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+
+        const { data } = await axios.post('https://thawing-hollows-22749.herokuapp.com/login', { email });
+        localStorage.setItem('token', data.token);
     }
 
     const handleResetPassword = async () => {

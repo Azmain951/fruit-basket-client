@@ -69,16 +69,16 @@ const FruitDetails = () => {
                             <p className="card-text">{result.description}</p>
                             <p>Price: ${result.price} <small>per kg</small></p>
                             <p>Quantity: {result.quantity}<small> kg</small></p>
-                            <button onClick={() => handleDelivered(result._id)} className='btn btn-update'>Delivered</button>
+                            <button onClick={() => handleDelivered(result._id)} className='btn btn-manage border-0'>Delivered</button>
                             <form className='mt-2' onSubmit={handleAddFruits}>
                                 <input className='me-2 py-1' type="text" name='quantity' placeholder='enter quantity to add' />
-                                <input className='btn btn-update' type="submit" value="Add" />
+                                <input className='btn btn-manage border-0' type="submit" value="Add" />
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <button onClick={() => navigate('/manage-items')} className='w-100 btn btn-link mt-4'>Manage Inventory <BsArrowRightCircle /></button>
+            <button onClick={() => navigate('/manage-items')} className='w-100 btn btn-update mt-4'>Manage Inventory <BsArrowRightCircle /></button>
         </div >
     );
 };

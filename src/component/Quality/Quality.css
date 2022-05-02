@@ -1,3 +1,13 @@
+.quality {
+    border-radius: 50px 50px 0 0;
+}
+
 .list {
     list-style: none;
+}
+
+@media screen and (max-width:576px) {
+    .quality {
+        width: 95% !important;
+    }
 }

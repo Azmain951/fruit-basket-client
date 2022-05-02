@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -10,10 +11,18 @@ const MyItems = () => {
     const [user] = useAuthState(auth);
 
     useEffect(() => {
-        fetch(`https://thawing-hollows-22749.herokuapp.com/fruits?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => setFruits(data));
-    }, [fruits])
+
+        const getItems = async () => {
+            const url = `https://thawing-hollows-22749.herokuapp.com/fruits?email=${user.email}`;
+            const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            setFruits(data);
+        }
+        getItems();
+    }, [user, fruits])
 
     return (
         <div className='container mx-auto my-5'>

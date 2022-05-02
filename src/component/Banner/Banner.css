@@ -1,6 +1,7 @@
 .banner {
     background-color: #31e7ff15;
     border-radius: 0 0 50px 50px;
+    padding-top: 30px;
 }
 
 .banner-header h2 {
