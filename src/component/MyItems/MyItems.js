@@ -16,7 +16,7 @@ const MyItems = () => {
     }, [fruits])
 
     return (
-        <div className='w-75 mx-auto my-5'>
+        <div className='container mx-auto my-5'>
             <h2 className='text-center mb-3'>My Items</h2>
             <table className='table text-center'>
                 <thead>

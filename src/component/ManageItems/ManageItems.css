@@ -1,0 +1,9 @@
+@media screen and (max-width:576px) {
+    .manage-item {
+        width: 100% !important;
+    }
+
+    .table th {
+        display: none;
+    }
+}

@@ -3,6 +3,7 @@ import useFruits from '../../hooks/useFruits';
 import Item from '../Item/Item';
 import { useNavigate } from 'react-router-dom';
 import { RiAddCircleLine } from "react-icons/ri";
+import './ManageItems.css'
 
 const ManageItems = () => {
 
@@ -13,15 +14,15 @@ const ManageItems = () => {
     }
 
     return (
-        <div className='container mx-auto my-5'>
+        <div className='manage-item container mx-auto my-5'>
             <div className='d-flex justify-content-center align-items-center mb-5'>
                 <h1 className='ms-auto'>Inventory</h1>
-                <button onClick={handleAddItem} className='btn btn-link ms-auto'>Add New Item <RiAddCircleLine /></button>
+                <button onClick={handleAddItem} className='btn btn-manage border-0 rounded-pill px-3 py-2 ms-auto'>Add New Item <RiAddCircleLine /></button>
             </div>
             <table className='table text-center'>
                 <thead>
                     <tr>
-                        <th scope="col">Image</th>
+                        <th className='img' scope="col">Image</th>
                         <th scope="col">Name</th>
                         <th scope="col">Supplier</th>
                         <th scope="col">Price($)</th>

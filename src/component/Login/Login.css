@@ -1,0 +1,5 @@
+@media screen and (max-width:576px) {
+    .login-form {
+        width: 90% !important;
+    }
+}

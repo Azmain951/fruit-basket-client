@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin'
 import Loading from '../Loading/Loading';
 import toast from 'react-hot-toast';
+import './Login.css'
 
 const Login = () => {
     const emailRef = useRef('');
@@ -55,7 +56,7 @@ const Login = () => {
     }
 
     return (
-        <div className='container w-50 mx-auto my-5'>
+        <div className='login-form container w-50 shadow p-5 rounded mx-auto my-5'>
             <h2 className='text-secondary text-center'>Please Login</h2>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -65,10 +66,10 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <input className="btn btn-primary w-50 mx-auto d-block mb-2" type="submit" value='Login' />
+                <input className="btn btn-update w-50 mx-auto d-block mb-2" type="submit" value='Login' />
             </Form>
             {errorElement}
-            <p>New to Food Basket? <Link to='/register' className='text-primary pe-auto'>Please Register</Link></p>
+            <p>New to Food Basket? <Link to='/register' className='text-primary pe-auto mt-3'>Please Register</Link></p>
             <p>Forget Password? <button onClick={handleResetPassword} className='btn btn-link text-secondary pe-auto'>Reset Password</button></p>
             <SocialLogin></SocialLogin>
         </div>

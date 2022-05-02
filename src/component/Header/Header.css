@@ -1,0 +1,10 @@
+.navbar-light .navbar-nav .nav-link {
+    color: #2497a6;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    text-decoration: underline;
+    color: #35dbd3;
+}

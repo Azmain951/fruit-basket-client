@@ -1,0 +1,9 @@
+.btn-manage {
+    color: white;
+    background: linear-gradient(to right, #63acff, #0051d4)
+}
+
+.btn-manage:hover {
+    color: white;
+    background: linear-gradient(to right, #0051d4, #63acff)
+}

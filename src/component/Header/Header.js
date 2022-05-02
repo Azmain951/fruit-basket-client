@@ -6,7 +6,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import logo from '../../images/logo.png';
-import './Header.css'
+import './Header.css';
+
 
 const Header = () => {
 
@@ -18,7 +19,7 @@ const Header = () => {
     }
 
     return (
-        <Navbar sticky="top" className='py-3' bg="light" expand="lg">
+        <Navbar sticky="top" className='py-3' bg="white" expand="lg">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img
@@ -28,7 +29,7 @@ const Header = () => {
                         height="30"
                         className="d-inline-block align-top me-2"
                     />
-                    Fruit Basket</Navbar.Brand>
+                    <b>Fruit <span style={{ color: '#24a69f' }}>Basket</span></b></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">

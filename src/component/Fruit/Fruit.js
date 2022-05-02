@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Fruit.css'
 
 const Fruit = ({ fruit }) => {
 
@@ -13,7 +14,7 @@ const Fruit = ({ fruit }) => {
     return (
         <div className="col">
             <div className="card h-100 border-0 shadow rounded-3 m-2">
-                <img src={img} className="card-img-top p-2 rounded-2" alt="..." />
+                <img src={img} className="card-img-top rounded-2" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <p className='card-text'>Supplier: {supplier}</p>
@@ -24,7 +25,7 @@ const Fruit = ({ fruit }) => {
                     <p><small className='card-text'>{description}</small></p>
                 </div>
                 <div className='card-footer p-0'>
-                    <button onClick={() => handleUpdate(_id)} className='btn btn-primary w-100 m-0 rounded-0 rounded-bottom'>Update</button>
+                    <button onClick={() => handleUpdate(_id)} className='btn btn-update w-100 m-0 rounded-0 rounded-bottom'>Update</button>
                 </div>
             </div>
         </div>

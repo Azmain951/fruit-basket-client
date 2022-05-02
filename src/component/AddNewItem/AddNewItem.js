@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import './AddNewItem.css'
 
 const AddNewItem = () => {
     const [user] = useAuthState(auth);
@@ -36,7 +37,7 @@ const AddNewItem = () => {
     }
 
     return (
-        <div className='w-50 mx-auto'>
+        <div className='add-form w-50 mx-auto shadow p-4 my-3 rounded'>
             <h2 className='text-center mt-4'>Add New Item</h2>
             <Form onSubmit={handleAddItem}>
                 <Row className="mb-3">
@@ -73,7 +74,7 @@ const AddNewItem = () => {
                         <Form.Control name='img' placeholder='imageLink' />
                     </Form.Group>
                 </Row>
-                <input className='btn btn-primary' type="submit" value="Add Item" />
+                <input className='btn btn-update px-4' type="submit" value="Add Item" />
             </Form>
         </div>
     );

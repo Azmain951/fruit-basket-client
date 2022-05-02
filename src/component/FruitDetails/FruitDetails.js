@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { BsArrowRightCircle } from "react-icons/bs";
 
 
 const FruitDetails = () => {
     const { id } = useParams();
     const [result, setResult] = useState({});
+    const navigate = useNavigate();
     useEffect(() => {
         const url = `https://thawing-hollows-22749.herokuapp.com/fruits/${id}`;
         fetch(url)
@@ -49,6 +51,8 @@ const FruitDetails = () => {
             .then(data => {
                 alert(`${newQuantity} ${result.name} added successfully`);
             })
+
+        e.target.reset();
     }
 
     return (
@@ -65,15 +69,16 @@ const FruitDetails = () => {
                             <p className="card-text">{result.description}</p>
                             <p>Price: ${result.price} <small>per kg</small></p>
                             <p>Quantity: {result.quantity}<small> kg</small></p>
-                            <button onClick={() => handleDelivered(result._id)} className='btn btn-primary'>Delivered</button>
+                            <button onClick={() => handleDelivered(result._id)} className='btn btn-update'>Delivered</button>
                             <form className='mt-2' onSubmit={handleAddFruits}>
                                 <input className='me-2 py-1' type="text" name='quantity' placeholder='enter quantity to add' />
-                                <input className='btn btn-primary' type="submit" value="Add" />
+                                <input className='btn btn-update' type="submit" value="Add" />
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <button onClick={() => navigate('/manage-items')} className='w-100 btn btn-link mt-4'>Manage Inventory <BsArrowRightCircle /></button>
         </div >
     );
 };

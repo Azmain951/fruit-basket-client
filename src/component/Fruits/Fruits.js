@@ -3,6 +3,7 @@ import Fruit from '../Fruit/Fruit';
 import useFruits from '../../hooks/useFruits'
 import { useNavigate } from 'react-router-dom';
 import { BsArrowRightCircle } from "react-icons/bs";
+import './Fruits.css'
 
 const Fruits = () => {
     const navigate = useNavigate();
@@ -20,7 +21,9 @@ const Fruits = () => {
                     fruits.slice(0, 6).map(fruit => <Fruit key={fruit._id} fruit={fruit}></Fruit>)
                 }
             </div>
-            <button onClick={handleManage} className='w-100 btn btn-link mt-5'>Manage Inventory <BsArrowRightCircle /></button>
+            <div className='d-flex justify-content-center'>
+                <button onClick={handleManage} className='btn btn-manage border-0 rounded-pill mt-5 px-5 py-2'>Manage Inventory <BsArrowRightCircle /></button>
+            </div>
         </div>
     );
 };
