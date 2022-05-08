@@ -7,7 +7,7 @@ import './ManageItems.css'
 
 const ManageItems = () => {
 
-    const [fruits, setFruits] = useFruits([]);
+    const [fruits] = useFruits([]);
     const navigate = useNavigate();
     const handleAddItem = () => {
         navigate('/add-items')
