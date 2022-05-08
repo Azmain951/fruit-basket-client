@@ -15,7 +15,7 @@ const MyItems = () => {
     useEffect(() => {
 
         const getItems = async () => {
-            const url = `http://localhost:5000/fruit?email=${user.email}`;
+            const url = `https://thawing-hollows-22749.herokuapp.com/fruit?email=${user.email}`;
             try {
                 const { data } = await axiosPrivate.get(url);
                 setFruits(data);
