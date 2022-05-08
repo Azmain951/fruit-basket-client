@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { BsTrash } from "react-icons/bs";
+import { FiEdit } from "react-icons/fi";
 
 const Item = ({ fruit }) => {
     const { _id, name, img, price, quantity, supplier } = fruit;
@@ -32,11 +34,11 @@ const Item = ({ fruit }) => {
             <td className='mbl'>{quantity}</td>
             <td>
                 <div className='d-flex flex-column'>
-                    <button onClick={handleRemove} className='btn btn-danger mb-2'>Remove Item</button>
-                    <button onClick={() => handleUpdate(_id)} className='btn btn-update'>Update Item</button>
+                    <button onClick={handleRemove} className='btn btn-danger mb-2'>Remove Item <BsTrash /></button>
+                    <button onClick={() => handleUpdate(_id)} className='btn btn-update'>Update Item <FiEdit /></button>
                 </div>
             </td>
-        </tr>
+        </tr >
 
     );
 };

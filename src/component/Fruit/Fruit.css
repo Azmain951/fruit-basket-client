@@ -10,6 +10,5 @@
 
 .btn-update:hover {
     color: white;
-    text-decoration: underline;
     background: linear-gradient(to right, #00b4d4, #72deff);
 }
