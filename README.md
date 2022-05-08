@@ -7,6 +7,7 @@ https://fruit-basket-523c2.web.app/
 ## Code Link
 Client Side: https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Azmain951  
 Server Side: https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Azmain951  
+StackOverflow Question Link: https://stackoverflow.com/q/72114199/18474717
 
 ## About Fruit Basket
  Fruit Basket is a warehouse management based website. Where user can see all the inventory items of the warehouse. The user can update the quantity of the items, remove items, add to the quantity. The website is well protected with private routes which user can only access when logged in. It has secure log in system using google firebase.
