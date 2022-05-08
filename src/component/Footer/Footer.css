@@ -1,6 +1,15 @@
+.footer p {
+    margin: 0;
+    padding: 0;
+}
+
 @media screen and (max-width:576px) {
     .footer {
         display: block !important;
         text-align: center;
+    }
+
+    .footer p {
+        margin: 10px 0;
     }
 }
