@@ -1,7 +1,8 @@
-import axios from 'axios';
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
 import Item from '../Item/Item';
 
@@ -9,17 +10,23 @@ const MyItems = () => {
 
     const [fruits, setFruits] = useState([]);
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     useEffect(() => {
 
         const getItems = async () => {
-            const url = `https://thawing-hollows-22749.herokuapp.com/fruits?email=${user.email}`;
-            const { data } = await axios.get(url, {
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('token')}`
+            const url = `http://localhost:5000/fruit?email=${user.email}`;
+            try {
+                const { data } = await axiosPrivate.get(url);
+                setFruits(data);
+            }
+            catch (error) {
+                console.log(error.message);
+                if (error.response.status === 403 || error.response.status === 401) {
+                    signOut(auth);
+                    navigate('/login');
                 }
-            });
-            setFruits(data);
+            }
         }
         getItems();
     }, [user, fruits])

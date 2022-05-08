@@ -44,7 +44,7 @@ const Login = () => {
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email, password);
 
-        const { data } = await axios.post('https://thawing-hollows-22749.herokuapp.com/login', { email });
+        const { data } = await axios.post('http://localhost:5000/login', { email });
         localStorage.setItem('token', data.token);
     }
 
