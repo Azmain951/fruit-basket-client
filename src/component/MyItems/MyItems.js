@@ -30,11 +30,11 @@ const MyItems = () => {
             <table className='table text-center'>
                 <thead>
                     <tr>
-                        <th scope="col">Image</th>
+                        <th className='mbl' scope="col">Image</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Supplier</th>
+                        <th className='mbl' scope="col">Supplier</th>
                         <th scope="col">Price($)</th>
-                        <th scope="col">Quantity</th>
+                        <th className='mbl' scope="col">Quantity</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>

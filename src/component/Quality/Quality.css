@@ -9,5 +9,10 @@
 @media screen and (max-width:576px) {
     .quality {
         width: 95% !important;
+        border-radius: 10px !important;
+    }
+
+    .features {
+        margin: 0 !important;
     }
 }

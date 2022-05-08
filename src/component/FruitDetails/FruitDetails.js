@@ -29,7 +29,7 @@ const FruitDetails = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    alert(`1 ${result.name} delivered!!!`);
+                    alert(`1 kg ${result.name} delivered!!!`);
                 })
 
         }
@@ -55,7 +55,7 @@ const FruitDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert(`${newQuantity} ${result.name} added successfully`);
+                alert(`${newQuantity} kg ${result.name} added successfully`);
             })
 
         e.target.reset();

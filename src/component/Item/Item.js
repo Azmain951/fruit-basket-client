@@ -25,11 +25,11 @@ const Item = ({ fruit }) => {
     return (
 
         <tr className='table-row'>
-            <th scope="row"><img className='' src={img} alt="" width={100} /></th>
+            <th className='mbl' scope="row"><img className='' src={img} alt="" width={100} /></th>
             <td>{name}</td>
-            <td>{supplier}</td>
+            <td className='mbl'>{supplier}</td>
             <td>{price}</td>
-            <td>{quantity}</td>
+            <td className='mbl'>{quantity}</td>
             <td>
                 <div className='d-flex flex-column'>
                     <button onClick={handleRemove} className='btn btn-danger mb-2'>Remove Item</button>

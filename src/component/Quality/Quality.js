@@ -10,7 +10,7 @@ const Quality = () => {
                 <div className='col-12 col-lg-5 p-5'>
                     <img src={quality} alt="" className='img-fluid' />
                 </div>
-                <div className='col-12 col-lg-6 p-5 d-flex flex-column justify-content-center ms-5'>
+                <div className='features col-12 col-lg-6 p-5 d-flex flex-column justify-content-center ms-5'>
                     <h2 className='mb-2'>Best Quality Assurance</h2>
                     <div className='list'>
                         <li><FcApproval /> Training Staff</li>

@@ -19,23 +19,25 @@ const ManageItems = () => {
                 <h1 className='ms-auto'>Inventory</h1>
                 <button onClick={handleAddItem} className='btn btn-manage border-0 rounded-pill px-3 py-2 ms-auto'>Add New Item <RiAddCircleLine /></button>
             </div>
-            <table className='table text-center'>
-                <thead>
-                    <tr>
-                        <th className='img' scope="col">Image</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Supplier</th>
-                        <th scope="col">Price($)</th>
-                        <th scope="col">Quantity(kg)</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        fruits.map(fruit => <Item key={fruit._id} fruit={fruit}></Item>)
-                    }
-                </tbody>
-            </table>
+            <div className='overflow-auto'>
+                <table className='table text-center'>
+                    <thead>
+                        <tr>
+                            <th className='img mbl' scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th className='mbl' scope="col">Supplier</th>
+                            <th scope="col">Price($)</th>
+                            <th className='mbl' scope="col">Quantity(kg)</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            fruits.map(fruit => <Item key={fruit._id} fruit={fruit}></Item>)
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

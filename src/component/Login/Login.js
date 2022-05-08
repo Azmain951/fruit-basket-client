@@ -60,8 +60,8 @@ const Login = () => {
     }
 
     return (
-        <div className='login-form container w-50 shadow p-5 rounded mx-auto my-5'>
-            <h2 className='text-secondary text-center'>Please Login</h2>
+        <div className='login-form container w-50 shadow p-5 rounded mx-auto mt-3 mb-5'>
+            <h2 className='text-center'>Please Login</h2>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
@@ -76,7 +76,7 @@ const Login = () => {
             <p>New to Food Basket? <Link to='/register' className='text-primary pe-auto mt-3'>Please Register</Link></p>
             <p>Forget Password? <button onClick={handleResetPassword} className='btn btn-link text-secondary pe-auto'>Reset Password</button></p>
             <SocialLogin></SocialLogin>
-        </div>
+        </div >
     );
 };
 

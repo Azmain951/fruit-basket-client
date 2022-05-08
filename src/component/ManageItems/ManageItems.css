@@ -1,13 +1,14 @@
 @media screen and (max-width:576px) {
     .manage-item {
-        width: 100% !important;
-    }
-
-    .table th {
-        display: none;
+        width: 98% !important;
+        padding: 30px 20px !important;
     }
 
     .table {
         border: 1px solid black;
+    }
+
+    .mbl {
+        display: none;
     }
 }

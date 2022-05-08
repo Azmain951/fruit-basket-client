@@ -5,5 +5,10 @@
 @media screen and (max-width:576px) {
     .contact {
         width: 95% !important;
+        border-radius: 10px !important;
+    }
+
+    .contact .image {
+        display: none;
     }
 }

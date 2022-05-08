@@ -23,7 +23,7 @@ const ContactUs = () => {
                         </Button>
                     </Form>
                 </div>
-                <div className='col-12 col-lg-6 p-5'>
+                <div className='image col-12 col-lg-6 p-5'>
                     <img src={query} alt="" className='img-fluid rounded-3' />
                 </div>
             </div>

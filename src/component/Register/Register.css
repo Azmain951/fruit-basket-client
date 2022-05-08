@@ -11,6 +11,7 @@
 
 @media screen and (max-width:576px) {
     .register {
-        width: 90% !important;
+        width: 95% !important;
+        padding: 40px 25px !important;
     }
 }

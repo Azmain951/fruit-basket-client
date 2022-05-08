@@ -15,5 +15,7 @@
 @media screen and (max-width:576px) {
     .fruits {
         width: 95% !important;
+        padding: 20px 10px !important;
+        border-radius: 10px !important;
     }
 }

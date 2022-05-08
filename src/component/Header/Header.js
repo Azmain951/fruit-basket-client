@@ -19,7 +19,7 @@ const Header = () => {
     }
 
     return (
-        <Navbar sticky="top" className='py-3' bg="white" expand="lg">
+        <Navbar sticky="top" className='py-3 shadow-sm' bg="white" expand="lg">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img
@@ -34,11 +34,12 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
-                        <Nav.Link as={Link} to="manage-items">Manage Items</Nav.Link>
-                        <Nav.Link as={Link} to="add-items">Add Items</Nav.Link>
+                        <Nav.Link as={Link} to="about">About</Nav.Link>
                         {
                             user ?
                                 <>
+                                    <Nav.Link as={Link} to="manage-items">Manage Items</Nav.Link>
+                                    <Nav.Link as={Link} to="add-items">Add Items</Nav.Link>
                                     <Nav.Link as={Link} to="my-items">My Items</Nav.Link>
                                     <NavDropdown title='Logout' id="basic-nav-dropdown">
                                         <NavDropdown.Item>{user.displayName}</NavDropdown.Item>
