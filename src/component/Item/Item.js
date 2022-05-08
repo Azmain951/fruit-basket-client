@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Item = ({ fruit }) => {
-    const { _id, name, img, description, price, quantity, supplier } = fruit;
+    const { _id, name, img, price, quantity, supplier } = fruit;
     const handleRemove = () => {
         const agree = window.confirm('Are you sure you want to delete?');
 

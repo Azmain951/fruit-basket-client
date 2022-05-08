@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { BsArrowRightCircle } from "react-icons/bs";
+import toast from 'react-hot-toast';
 
 
 const FruitDetails = () => {
@@ -15,21 +16,26 @@ const FruitDetails = () => {
     }, [result]);
 
     const handleDelivered = (id) => {
+        if (result.quantity > 0) {
+            const updateQuantity = { quantity: (result.quantity - 1) }
 
-        const updateQuantity = { quantity: (result.quantity - 1) }
-
-        const url = `https://thawing-hollows-22749.herokuapp.com/fruits/${id}`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(updateQuantity)
-        })
-            .then(res => res.json())
-            .then(data => {
-                alert(`1 ${result.name} delivered!!!`);
+            const url = `https://thawing-hollows-22749.herokuapp.com/fruits/${id}`;
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(updateQuantity)
             })
+                .then(res => res.json())
+                .then(data => {
+                    alert(`1 ${result.name} delivered!!!`);
+                })
+
+        }
+        else {
+            toast.error(`${result.name} is out of stock.. Please restock first!!`)
+        }
     }
 
     const handleAddFruits = e => {
@@ -56,8 +62,8 @@ const FruitDetails = () => {
     }
 
     return (
-        <div className='w-75 mx-auto my-4'>
-            <div className="card mb-3">
+        <div className='w-75 mx-auto my-4 pb-3'>
+            <div className="card mb-3 p-3">
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src={result.img} className="img-fluid rounded-start" alt="..." />
@@ -69,10 +75,15 @@ const FruitDetails = () => {
                             <p className="card-text">{result.description}</p>
                             <p>Price: ${result.price} <small>per kg</small></p>
                             <p>Quantity: {result.quantity}<small> kg</small></p>
+                            {
+                                result.quantity ?
+                                    <p className='text-success text-uppercase'>in stock</p>
+                                    : <p className='text-success text-danger'>out of stock</p>
+                            }
                             <button onClick={() => handleDelivered(result._id)} className='btn btn-manage border-0'>Delivered</button>
                             <form className='mt-2' onSubmit={handleAddFruits}>
-                                <input className='me-2 py-1' type="text" name='quantity' placeholder='enter quantity to add' />
-                                <input className='btn btn-manage border-0' type="submit" value="Add" />
+                                <input className='me-2 p-1' type="text" name='quantity' placeholder='enter restock quantity' />
+                                <input className='btn btn-manage border-0' type="submit" value="Restock" />
                             </form>
                         </div>
                     </div>
