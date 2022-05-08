@@ -1,0 +1,5 @@
+@media screen and (max-width:576px) {
+    .fruit-details {
+        width: 95% !important;
+    }
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { BsArrowRightCircle } from "react-icons/bs";
 import toast from 'react-hot-toast';
+import './FruitDetails.css'
 
 
 const FruitDetails = () => {
@@ -62,7 +63,7 @@ const FruitDetails = () => {
     }
 
     return (
-        <div className='w-75 mx-auto my-4 pb-3'>
+        <div className='fruit-details w-75 mx-auto my-4 pb-3'>
             <div className="card mb-3 p-3">
                 <div className="row g-0">
                     <div className="col-md-4">
